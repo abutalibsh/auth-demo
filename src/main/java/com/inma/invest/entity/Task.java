@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.inma.invest.domain.audit.UserDateAudit;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,7 +17,7 @@ import lombok.ToString;
 @Setter
 @Entity(name = "tasks")
 @ToString
-public class Task  implements Comparable<Task> {
+public class Task extends UserDateAudit implements Comparable<Task> {
 
 	@Id
 	@GeneratedValue

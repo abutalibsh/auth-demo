@@ -11,17 +11,6 @@ import com.inma.invest.entity.Task;
 
 public interface TaskRepository extends CrudRepository<Task, Long> {
 
-//	Task findByIdAndUserId(int postId, int userId);
-
-//	List<Task> findByScheduledAndUserId(boolean scheduled, int userId);
-//
-//	List<Task> findByExecutedAndUserId(boolean posted, int userId);
-//
-//	List<Task> findByEnabledAndUserId(boolean enabled, int userId);
-//
-//	List<Task> findByErrorAndUserId(boolean error, int userId);
-//
-//	List<Task> findByEnabledAndExecutedAndUserId(boolean enabled, boolean posted, int userId);
 
 	List<Task> findByEnabledAndExecutedAndError(boolean enabled, boolean posted, boolean error);
 
