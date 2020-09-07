@@ -21,12 +21,10 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.NaturalId;
 
-import com.inma.invest.entity.audit.DateAudit;
-
 @Entity
 @Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username" }),
 		@UniqueConstraint(columnNames = { "email" }) })
-public class User extends DateAudit {
+public class User  {
 	private static final long serialVersionUID = 1L;
 
 	@Id

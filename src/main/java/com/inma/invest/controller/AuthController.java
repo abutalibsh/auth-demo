@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.inma.invest.config.SocialConfig;
 import com.inma.invest.config.secuirty.CurrentUser;
 import com.inma.invest.config.secuirty.JwtTokenProvider;
 import com.inma.invest.config.secuirty.UserPrincipal;
@@ -61,9 +60,6 @@ public class AuthController {
 
 	@Autowired
 	JwtTokenProvider tokenProvider;
-
-	@Autowired
-	SocialConfig socialConfig;
 
 	private String getJwtFromRequest(String bearerToken) {
 		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
